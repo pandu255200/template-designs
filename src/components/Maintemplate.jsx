@@ -25,7 +25,7 @@ const handleProductsChange = (e) => {
     navigate("/product/facegenie");
   } else if (selected === "analytics") {
     navigate("/product/analytics");
-  } else if (selected === "main") {
+  } else if (selected === "mainpage") {
     navigate("/main");
   }
 };

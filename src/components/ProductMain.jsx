@@ -47,7 +47,7 @@ const navigate = useNavigate();
         marginTop:'20px', 
       width: "100px",    // Set desired width
       height: "auto",    // Maintain aspect ratio
-      maxHeight: "50px", // Optional cap on height
+      maxHeight: "60px", // Optional cap on height
         objectFit: "contain",
       marginRight:'0'
     }} 
