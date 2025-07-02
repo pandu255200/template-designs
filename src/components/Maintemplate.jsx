@@ -35,22 +35,22 @@ const handleProductsChange = (e) => {
     <div className="main-template-container">
       <div className="template-content-box">
         <div className="template-section">
-          <h3>Customs</h3>
-          <label htmlFor="customs-select">Select Custom Template:</label>
+          <h3>Custom</h3>
+          {/* <label htmlFor="customs-select">Select Custom Template:</label> */}
           <select
             id="customs-select"
             className="template-dropdown"
             onChange={handleCustomsChange}
           >
             <option value="">-- Choose an option --</option>
-            <option value="customspage">CustomsPage</option>
+            <option value="customspage">CustomPage</option>
             <option value="mainpage">MainPage</option>
           </select>
         </div>
 
         <div className="template-section">
           <h3>Products</h3>
-          <label htmlFor="customs-select">Select Product Template:</label>
+          {/* <label htmlFor="customs-select">Select Product Template:</label> */}
           <select
             id="customs-select"
             className="template-dropdown"
