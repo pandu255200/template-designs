@@ -42,7 +42,7 @@ function Prototype() {
                    className={`nav-button ${
                      location.pathname === "/analytics/home" ? "active" : ""
                    }`}
-                   onClick={() => navigate("/analytics/home")}
+                  //  onClick={() => navigate("/analytics/home")}
                  >
                    <FaHome />
                    <span>Home</span>
@@ -52,7 +52,7 @@ function Prototype() {
                    className={`nav-button ${
                      location.pathname === "/analytics/sensors" ? "active" : ""
                    }`}
-                   onClick={() => navigate("/analytics/sensors")}
+                  //  onClick={() => navigate("/analytics/sensors")}
                  >
                    <MdSensors />
                    <span>Sensor's Health</span>
@@ -62,7 +62,7 @@ function Prototype() {
                    className={`nav-button ${
                      location.pathname === "/analytics/config" ? "active" : ""
                    }`}
-                   onClick={() => navigate("/analytics/config")}
+                  //  onClick={() => navigate("/analytics/config")}
                  >
                    <FaCog />
                    <span>Configuration</span>
@@ -72,7 +72,7 @@ function Prototype() {
                    className={`nav-button ${
                      location.pathname === "/analytics/users" ? "active" : ""
                    }`}
-                   onClick={() => navigate("/analytics/users")}
+                  //  onClick={() => navigate("/analytics/users")}
                  >
                    <FaUserCog />
                    <span>User Management</span>

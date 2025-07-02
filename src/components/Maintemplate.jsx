@@ -26,7 +26,7 @@ const handleProductsChange = (e) => {
   } else if (selected === "analytics") {
     navigate("/product/analytics");
   } else if (selected === "mainpage") {
-    navigate("/main");
+    navigate("/product/main");
   }
 };
 

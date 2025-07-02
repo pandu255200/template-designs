@@ -13,6 +13,8 @@ import ProAnalytics from './components/ProAnalytics';
 import ProFace from './components/ProFace';
 import CustomsPage from './components/CustomsPage';
 import CustMain from './components/CustMain';
+import ProductMain from './components/ProductMain';
+import ProMain from './components/ProMain';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
     <Route path="/product/zodhagpt" element={<ProductPage />} />
     <Route path="/customs" element={<CustomsPage />} />
     <Route path="/main" element={<CustMain />} />
+    <Route path="/product/main" element={<ProductMain />} />
+    <Route path="/mainproduct" element={<ProMain />} />
     
   </Routes>
 </Router>

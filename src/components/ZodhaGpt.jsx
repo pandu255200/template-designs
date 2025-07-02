@@ -49,7 +49,7 @@ const handleTitleClick = () => {
             className={`nav-button ${
               location.pathname === "/analytics/home" ? "active" : ""
             }`}
-            onClick={() => navigate("/analytics/home")}
+            // onClick={() => navigate("/analytics/home")}
           >
             <FaHome />
             <span>Home</span>
@@ -59,7 +59,7 @@ const handleTitleClick = () => {
             className={`nav-button ${
               location.pathname === "/analytics/sensors" ? "active" : ""
             }`}
-            onClick={() => navigate("/analytics/sensors")}
+            // onClick={() => navigate("/analytics/sensors")}
           >
             <MdSensors />
             <span>Sensor's Health</span>
@@ -69,7 +69,7 @@ const handleTitleClick = () => {
             className={`nav-button ${
               location.pathname === "/analytics/config" ? "active" : ""
             }`}
-            onClick={() => navigate("/analytics/config")}
+            // onClick={() => navigate("/analytics/config")}
           >
             <FaCog />
             <span>Configuration</span>
@@ -79,7 +79,7 @@ const handleTitleClick = () => {
             className={`nav-button ${
               location.pathname === "/analytics/users" ? "active" : ""
             }`}
-            onClick={() => navigate("/analytics/users")}
+            // onClick={() => navigate("/analytics/users")}
           >
             <FaUserCog />
             <span>User Management</span>

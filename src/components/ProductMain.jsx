@@ -1,102 +1,47 @@
 import React from "react";
-import "./styles/MainTemplate.css";
-import logo from "./assets/resoluteai.png"; // replace with your AK or FG logo
-import clientlogo from './assets/clientlogo.png'
 import { useNavigate } from "react-router-dom";
+import "./styles/ProductsZodha.css"; 
 
-
-
-const CustMain = () => {
+const titles = [
+   "ZodhaGpt MainPage",
+   "AnalyticsKart MainPage",
+   "Facegenie MainPage",
  
-const navigate = useNavigate();
-
-    return (
-      
-        <div className="main-template-container">
-              <button 
-        onClick={() => navigate("/")}
-        style={{
-          position: "absolute",
-          bottom: "100px",
-          left: "35%",
-          transform: "translateX(-50%)",
-          padding: "10px 20px",
-          backgroundColor: "#ff4d4d",
-          color: "#fff",
-          border: "none",
-          borderRadius: "6px",
-          cursor: "pointer"
-        }}
-      >
-        ⬅ Back
-        </button>
-         
-      <div className="template-content-box">
-       
-      <h4>Client's Products and Images</h4>
-      
-      </div>
-      <div className="template-login-box" >
-       <div className="template-logo"   style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
  
-  <img 
-    src={clientlogo} 
-    alt="ResoluteAI Software" 
-    className="template-dash" 
-    style={{
-        marginTop:'20px', 
-      width: "100px",    // Set desired width
-      height: "auto",    // Maintain aspect ratio
-      maxHeight: "60px", // Optional cap on height
-        objectFit: "contain",
-      marginRight:'0'
-    }} 
-  />
-</div>
+];
 
+const ProductMain = () => {
+  const navigate = useNavigate();
 
-        <form className="template-form">
-          <label>Email Id</label>
-          <input type="email" placeholder="you@example.com" />
+  const handleTitleClick = (title) => {
+    navigate("/mainproduct", { state: { selectedTitle: title } });
+  };
 
-          <label>Password</label>
-          <input type="password" placeholder="Enter Your Password" />
-
-          <button type="submit">Sign In</button>
-        </form>
-
-        <div className="template-powered-by">
-          <p>Powered By</p>
-          <img src={logo} alt="ResoluteAI Software" className="template-dash" />
-              </div>
-              
-              
-          </div>
-        
-    <a 
-  href="/code/ZodhaAnalytics.zip" 
-  download 
-  style={{
-    position: "absolute",
-          bottom: "200px",
-          left: "35%",
-          transform: "translateX(-50%)",
-          padding: "10px 20px",
-          backgroundColor: "#ff4d4d",
-          color: "#fff",
-          border: "none",
-          borderRadius: "6px",
-    cursor: "pointer",
-          textDecoration:'none'
-  }}
->
-  ⬇ Download Full Project
-</a>
-    
-
-      </div>
-      
+  return (
+    <div className="products-container">
+      <h2 className="products-heading">Products main Pages List</h2>
+      <table className="products-table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Title</th>
+          </tr>
+        </thead>
+        <tbody>
+          {titles.map((title, index) => (
+            <tr
+              key={index}
+              onClick={() => handleTitleClick(title)}
+              className="clickable-row"
+            >
+              <td>{index + 1}</td>
+              <td>{title}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
-export default CustMain;
+export default ProductMain;
