@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.app-container {
+ min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+
+.sidebar {
+  background-color: #fafafa;
+  border-right: 2px solid #ff4d4d;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.sidebar.closed {
+  width: 0;
+}
+
+
+.sidebar.closed .logo,
+.sidebar.closed .nav-links,
+.sidebar.closed .footer-logo {
+  display: none;
+}
+
+
+.logo,
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+.logo img,
+.footer-logo img {
+  max-width: 160px;
+  max-height: 60px;
+  transition: all 0.3s ease;
+}
+
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #5d5454;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.nav-button:hover {
+  background-color: #ffecec;
+  color: #ff4d4d;
+  border-radius: 6px;
+}
+.nav-button.active {
+  background-color: #ffecec;
+  color: #ff4d4d;
+  border-radius: 6px;
+}
+
+.nav-button svg {
+  transition: color 0.3s ease;
+}
+.nav-button span {
+  transition: all 0.3s ease;
+}
+
+.sidebar.closed .nav-button {
+  justify-content: center;
+}
+
+.sidebar.closed .nav-button span {
+  display: none;
+}
+
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #ff4d4d;
+  padding: 10px;
+  position: relative;
+}
+
+.toggle-btn {
+  position: absolute;
+  left: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #ff4d4d;
+}
+
+.top-bar h1 {
+  color: #ff1a1a;
+  font-weight: bold;
+}
+
+
+.content-body {
+  padding: 5px;
+}
+
+
+
+.footer-logo {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-top: auto;
+}
+
+
+.footer-logo img {
+  max-width: 160px;
+  max-height: 60px;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+.custom-bar:hover {
+  background-color: #ff6655;
+}
+
+
+.toggle-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.custom-bar {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 49%,
+    red 50%,
+    white 51%,
+    white 100%
+  );
+  border: 1px solid red;
+  border-radius: 2px;
+  transition: opacity 0.3s;
+}
+
+
+.custom-bar:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* Header Container */
+.app-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Keeps layout aligned initially */
+  padding: 10px 20px;
+  border-bottom: 2px solid #ff4d4d;
+  height: 80px;
+  background-color: white;
+}
+
+/* Left: Toggle Button */
+.sidebar-toggle {
+  position: absolute;
+  top: 0;               /* Add this */
+  left: 0;              /* Already present, change to 0 */
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 9999;        /* Increase if other elements overlap */
+}
+
+
+.toggle-icon {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(
+    to right,
+    white 0%,
+    white 45%,
+    red 45%,
+    red 55%,
+    white 55%,
+    white 100%
+  );
+  border: 1px solid red;
+  border-radius: 2px;
+  transition: opacity 0.3s;
+}
+
+.toggle-icon:hover {
+  opacity: 0.8;
+}
+
+/* Center: Title */
+.header-title {
+  position: absolute;
+  left: 200px;
+  right: 280px;
+  text-align: center;
+  font-weight: bold;
+  color: #ff1a1a;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: clamp(12px, 4vw, 24px); /* 👈 Automatically scales font */
+}
+
+
+/* Right: Logo */
+.app-logo {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.app-logo img {
+  width: 100px;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
+}
+.app-client{
+  position: absolute;
+  right: 130px;
+  top:50%;
+  transform: translateY(-50%);
+}
+.app-client img {
+  
+  width: 130px;
+  height: auto;
+  max-height: 70px;
+  object-fit: contain;
+}
