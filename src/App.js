@@ -5,7 +5,7 @@ import Home from './components/Home';
 import History from './components/History';
 
 import Analytics from './components/Analytics';
-import Analyticshome from './components/Analyticshome';
+// import Analyticshome from './components/Analyticshome';
 import ZodhaGpt from './components/ZodhaGpt';
 import Maintemplate from './components/Maintemplate';
 import ProductPage from './components/ProductsZodha';
@@ -29,7 +29,7 @@ function App() {
 
     {/* AnalyticsKart */}
     <Route path="/analytics" element={<Analytics />}>
-      <Route path="home" element={<Analyticshome />} />
+      {/* <Route path="home" element={<Analyticshome />} /> */}
     </Route>
 
     <Route path="/product/analytics" element={<ProAnalytics />} />
