@@ -96,7 +96,7 @@ const handleTitleClick = () => {
         </nav>
 
         <div className="footer-logo">
-          <p>Powered by</p>
+          <p className="powered">Powered By</p>
           <img src={ing} alt="ResoluteAI" />
         </div>
       </div>

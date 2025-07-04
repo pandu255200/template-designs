@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./styles/ProductsZodha.css"; 
 
 const titles = [
-   "ZodhaGpt MainPage",
-   "AnalyticsKart MainPage",
-   "Facegenie MainPage",
+  "AnalyticsKart Landing Screen",
+  "facegenie Landing Screen",
+   "ZodhaGPT Landing Screen",
  
  
 ];
@@ -19,7 +19,7 @@ const ProductMain = () => {
 
   return (
     <div className="products-container">
-      <h2 className="products-heading">Products main Pages List</h2>
+      <h2 className="products-heading">Product Main Pages List</h2>
       <table className="products-table">
         <thead>
           <tr>
@@ -40,6 +40,23 @@ const ProductMain = () => {
           ))}
         </tbody>
       </table>
+        <button 
+        onClick={() => navigate("/")}
+        style={{
+          position: "absolute",
+          top: "100px",
+          right: "0%",
+          transform: "translateX(-50%)",
+          padding: "8px 15px",
+          backgroundColor: "#ff4d4d",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer"
+        }}
+      >
+        ⬅ Back to Login Screen
+      </button>
     </div>
   );
 };

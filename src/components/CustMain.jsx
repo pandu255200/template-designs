@@ -30,10 +30,37 @@ const navigate = useNavigate();
       >
         ⬅ Back
         </button>
+        <h4
+            style={{
+            display: "flex",
+               position: "absolute",
+          bottom: "400px",
+          left: "35%",
+          transform: "translateX(-50%)",
+          // padding: "10px 20px",
+          // backgroundColor: "#ff4d4d",
+          // color: "#fff",
+          border: "none",
+          // borderRadius: "6px",
+          // cursor: "pointer"
+            }}
+          >
+            Note : &nbsp;
+            <p
+              style={{
+                fontSize: "17px",
+                fontWeight: "normal",
+              }}
+            >
+              All changes on this page will be made based on the client's
+              guidance and suggestions.
+            </p>
+          </h4>
          
       <div className="template-content-box">
        
-      <h4>Client's Products and Images</h4>
+          <h4>Client's Products and Images</h4>
+          
       
       </div>
       <div className="template-login-box" >
@@ -52,7 +79,8 @@ const navigate = useNavigate();
       marginRight:'0'
     }} 
   />
-</div>
+          </div>
+          
 
 
         <form className="template-form">
@@ -66,7 +94,10 @@ const navigate = useNavigate();
         </form>
 
         <div className="template-powered-by">
-          <p>Powered By</p>
+            <p style={{
+              fontWeight: 'bold',
+              fontSize:'14px'
+          }}>Powered By</p>
           <img src={logo} alt="ResoluteAI Software" className="template-dash" />
               </div>
               
@@ -91,7 +122,8 @@ const navigate = useNavigate();
   }}
 >
   ⬇ Download Full Project
-</a>
+        </a>
+        
     
 
       </div>

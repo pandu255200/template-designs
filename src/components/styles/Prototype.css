@@ -284,3 +284,8 @@
   max-height: 70px;
   object-fit: contain;
 }
+
+
+.powered{
+  font-weight: bold;
+}

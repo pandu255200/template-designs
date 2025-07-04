@@ -4,7 +4,7 @@ import "./styles/ProductsZodha.css"; // 👈 Optional: separate CSS file for sty
 
 const titles = [
    "Warehouse Management System",
-  "Employee Tracking System (Using BLE-LORA)",
+  "Employee Tracking System",
   "Control Tower – A real time centralized dashboard",
   "Predictive Maintenance",
   "Asset Management (Using RFID, BLE, etc)",
@@ -14,6 +14,7 @@ const titles = [
   "Commodity Price Prediction",
   "Recommendation Engine",
 ];
+const title = titles.sort()
 
 const ProAnalytics = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const ProAnalytics = () => {
 
   return (
     <div className="products-container">
-      <h2 className="products-heading">AnalyticsKart Products Pages List</h2>
+      <h2 className="products-heading">AnalyticsKart Product Pages List</h2>
       <table className="products-table">
         <thead>
           <tr>
@@ -33,18 +34,52 @@ const ProAnalytics = () => {
           </tr>
         </thead>
         <tbody>
-          {titles.map((title, index) => (
+          {title.map((t, index) => (
             <tr
               key={index}
-              onClick={() => handleTitleClick(title)}
+              onClick={() => handleTitleClick(t)}
               className="clickable-row"
             >
               <td>{index + 1}</td>
-              <td>{title}</td>
+              <td>{t}</td>
             </tr>
           ))}
         </tbody>
       </table>
+ <button 
+        onClick={() => navigate("/")}
+        style={{
+          position: "absolute",
+          top: "100px",
+          right: "0%",
+          transform: "translateX(-50%)",
+          padding: "8px 15px",
+          backgroundColor: "#ff4d4d",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer"
+        }}
+      >
+        ⬅ Back to Login Screen
+      </button>
+       <button 
+        onClick={() => navigate("/mainproduct")}
+        style={{
+          position: "absolute",
+          top: "200px",
+          right: "1.2%",
+          transform: "translateX(-50%)",
+          padding: "8px 15px",
+          backgroundColor: "#ff4d4d",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer"
+        }}
+      >
+         Go to Landing Screen
+      </button>
     </div>
   );
 };

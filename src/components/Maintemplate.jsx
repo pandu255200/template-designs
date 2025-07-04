@@ -35,7 +35,7 @@ const handleProductsChange = (e) => {
     <div className="main-template-container">
       <div className="template-content-box">
         <div className="template-section">
-          <h3>Custom</h3>
+          <h3>Custom Solutions</h3>
           {/* <label htmlFor="customs-select">Select Custom Template:</label> */}
           <select
             id="customs-select"
@@ -43,8 +43,8 @@ const handleProductsChange = (e) => {
             onChange={handleCustomsChange}
           >
             <option value="">-- Choose an option --</option>
-            <option value="customspage">CustomPage</option>
-            <option value="mainpage">MainPage</option>
+            <option value="mainpage">Login Screen</option>
+            <option value="customspage">Landing Page</option>
           </select>
         </div>
 
@@ -57,10 +57,18 @@ const handleProductsChange = (e) => {
             onChange={handleProductsChange}
           >
             <option value="">-- Choose an option --</option>
-            <option value="zodhagpt">ZodhaGpt</option>
-            <option value="facegenie">Facegenie</option>
-            <option value="analytics">Analytics</option>
-            <option value="mainpage">MainPage</option>
+            <option value="mainpage">Login Screen</option>
+            <option value="analytics">
+              <span>A</span>
+              <p>nalytics</p>
+              <span>Kart</span>
+            </option>
+            <option value="facegenie">facegenie</option>
+            <option value="zodhagpt">
+              <span>Z</span>
+              <p>odha</p>
+              <span>GPT</span>
+            </option>
           </select>
         </div>
       </div>
@@ -84,7 +92,11 @@ const handleProductsChange = (e) => {
         </form>
 
         <div className="template-powered-by">
-          <p>Powered By</p>
+          <p style={{
+            fontWeight: 'bold',
+            margin: '0 0 3px 0',
+            fontSize:'14px'
+          }}>Powered By</p>
           <img src={logo} alt="ResoluteAI Software" className="template-dash" />
         </div>
       </div>

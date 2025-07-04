@@ -17,7 +17,7 @@ const ProMain = () => {
   const getClientLogo = () => {
     switch (selectedTitle) {
       case "ZodhaGpt MainPage":
-        return zodhaLogo;
+        return 'zodhaLogo';
       case "AnalyticsKart MainPage":
         return analyticsKartLogo;
       case "Facegenie MainPage":
@@ -27,7 +27,7 @@ const ProMain = () => {
     }
   };
 
-  const clientLogo = getClientLogo();
+  const productLogo = getClientLogo();
 
   return (
     <div className="main-template-container">
@@ -36,7 +36,7 @@ const ProMain = () => {
         style={{
           position: "absolute",
           bottom: "100px",
-          left: "35%",
+          right: "37.5%",
           transform: "translateX(-50%)",
           padding: "10px 20px",
           backgroundColor: "#ff4d4d",
@@ -46,14 +46,14 @@ const ProMain = () => {
           cursor: "pointer"
         }}
       >
-        ⬅ Back
+        ⬅ Back to Login Screen
       </button>
       <button 
         onClick={() => navigate("/product/main")}
         style={{
           position: "absolute",
-          top: "50px",
-          left: "35%",
+          bottom: "100px",
+          left: "20%",
           transform: "translateX(-50%)",
           padding: "10px 20px",
           backgroundColor: "#ff4d4d",
@@ -63,18 +63,26 @@ const ProMain = () => {
           cursor: "pointer"
         }}
       >
-        ⬅ Back to Pages List
+        ⬅ Back to Product Pages List
       </button>
 
       <div className="template-content-box">
-        <h4>{selectedTitle || "Client's Products and Images"}</h4>
+        <h4>{"Landing Screen"}</h4>
       </div>
 
       <div className="template-login-box">
         <div className="template-logo" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <img 
-            src={clientLogo} 
-            alt="Client Logo" 
+          <h5 style={{
+            marginTop: '30px',
+            fontSize: '25px',
+            color:'red',
+            // border: '2px solid red',
+            //  padding:'20px 20px'
+             
+          }}> Product Title</h5>
+          {/* <img 
+            src={productLogo} 
+            alt="productLogo" 
             className="template-dash" 
             style={{
               marginTop: '20px',
@@ -83,7 +91,7 @@ const ProMain = () => {
               maxHeight: "50px",
               objectFit: "contain"
             }} 
-          />
+          /> */}
         </div>
 
         <form className="template-form">
@@ -95,7 +103,7 @@ const ProMain = () => {
         </form>
 
         <div className="template-powered-by">
-          <p>Powered By</p>
+          <p className="powered">Powered By</p>
           <img src={logo} alt="ResoluteAI Software" className="template-dash" />
         </div>
       </div>

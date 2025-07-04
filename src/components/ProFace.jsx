@@ -33,6 +33,8 @@ const titles = [
   "Person Fall or Trip Detection"
 ];
 
+const title = titles.sort()
+
 const ProFace = () => {
   const navigate = useNavigate();
 
@@ -42,7 +44,7 @@ const ProFace = () => {
 
   return (
     <div className="products-container">
-      <h2 className="products-heading">FaceGenie Products Pages List</h2>
+      <h2 className="products-heading">facegenie Product Pages List</h2>
       <table className="products-table">
         <thead>
           <tr>
@@ -51,18 +53,52 @@ const ProFace = () => {
           </tr>
         </thead>
         <tbody>
-          {titles.map((title, index) => (
+          {title.map((t, index) => (
             <tr
               key={index}
-              onClick={() => handleTitleClick(title)}
+              onClick={() => handleTitleClick(t)}
               className="clickable-row"
             >
               <td>{index + 1}</td>
-              <td>{title}</td>
+              <td>{t}</td>
             </tr>
           ))}
         </tbody>
       </table>
+       <button 
+        onClick={() => navigate("/")}
+        style={{
+          position: "absolute",
+          top: "100px",
+          right: "0%",
+          transform: "translateX(-50%)",
+          padding: "8px 15px",
+          backgroundColor: "#ff4d4d",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer"
+        }}
+      >
+        ⬅ Back to Login Screen
+      </button>
+       <button 
+        onClick={() => navigate("/mainproduct")}
+        style={{
+          position: "absolute",
+          top: "200px",
+          right: "1.2%",
+          transform: "translateX(-50%)",
+          padding: "8px 15px",
+          backgroundColor: "#ff4d4d",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer"
+        }}
+      >
+         Go to Landing Screen
+      </button>
       </div>
       
   );
