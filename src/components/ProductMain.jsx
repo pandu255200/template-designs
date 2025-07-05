@@ -4,7 +4,7 @@ import "./styles/ProductsZodha.css";
 
 const titles = [
   "AnalyticsKart Landing Screen",
-  "facegenie Landing Screen",
+  "FaceGenie Landing Screen",
    "ZodhaGPT Landing Screen",
  
  

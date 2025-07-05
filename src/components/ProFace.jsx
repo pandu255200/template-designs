@@ -44,7 +44,7 @@ const ProFace = () => {
 
   return (
     <div className="products-container">
-      <h2 className="products-heading">facegenie Product Pages List</h2>
+      <h2 className="products-heading">FaceGenie Product Pages List</h2>
       <table className="products-table">
         <thead>
           <tr>

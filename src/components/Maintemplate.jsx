@@ -63,7 +63,7 @@ const handleProductsChange = (e) => {
               <p>nalytics</p>
               <span>Kart</span>
             </option>
-            <option value="facegenie">facegenie</option>
+            <option value="facegenie">FaceGenie</option>
             <option value="zodhagpt">
               <span>Z</span>
               <p>odha</p>
