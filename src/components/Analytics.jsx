@@ -146,7 +146,7 @@ const Analytics = () => {
           <h2 className="dash-workspace-title">Work Space</h2>
           <div className="download-actions"></div>
           <a
-            href="/code/analytics.zip"
+            href="/code/AnalyticsKart.zip"
             download
             style={{
               display: "inline-block",

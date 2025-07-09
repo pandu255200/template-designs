@@ -3,9 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./styles/ProductsZodha.css";
 
 const titles = [
-  "AnalyticsKart Landing Screen",
-  "FaceGenie Landing Screen",
-  "ZodhaGPT Landing Screen",
+  "AnalyticsKart Login Screen",
+  "FaceGenie Login Screen",
+  "ZodhaGPT Login Screen",
 ];
 
 const ProductMain = () => {

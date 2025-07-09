@@ -146,7 +146,7 @@ function Prototype() {
           <h2 className="dash-workspace-title">Work Space</h2>
           <div className="download-actions"></div>
           <a
-            href="/code/face.zip"
+            href="/code/FACEGENIE.zip"
             download
             style={{
               display: "inline-block",
