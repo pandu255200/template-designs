@@ -2,8 +2,8 @@ import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./styles/MainTemplate.css";
 
-import logo from "./assets/resoluteai.png"; 
-import zodhaLogo from "./assets/ZodhaGpt.png"; 
+import logo from "./assets/resoluteai.png";
+import zodhaLogo from "./assets/ZodhaGpt.png";
 import analyticsKartLogo from "./assets/image.png";
 import facegenieLogo from "./assets/facegenie.png";
 
@@ -13,11 +13,11 @@ const ProMain = () => {
 
   const { selectedTitle } = location.state || {};
 
-  // 🔁 Dynamic logo selection
+
   const getClientLogo = () => {
     switch (selectedTitle) {
       case "ZodhaGpt MainPage":
-        return 'zodhaLogo';
+        return "zodhaLogo";
       case "AnalyticsKart MainPage":
         return analyticsKartLogo;
       case "Facegenie MainPage":
@@ -31,7 +31,7 @@ const ProMain = () => {
 
   return (
     <div className="main-template-container">
-      <button 
+      <button
         onClick={() => navigate("/")}
         style={{
           position: "absolute",
@@ -43,12 +43,12 @@ const ProMain = () => {
           color: "#fff",
           border: "none",
           borderRadius: "6px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Login Screen
       </button>
-      <button 
+      <button
         onClick={() => navigate("/product/main")}
         style={{
           position: "absolute",
@@ -60,7 +60,7 @@ const ProMain = () => {
           color: "#fff",
           border: "none",
           borderRadius: "6px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Product Pages List
@@ -71,15 +71,27 @@ const ProMain = () => {
       </div>
 
       <div className="template-login-box">
-        <div className="template-logo" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h5 style={{
-            marginTop: '30px',
-            fontSize: '25px',
-            color:'red',
-            // border: '2px solid red',
-            //  padding:'20px 20px'
-             
-          }}> Product Title</h5>
+        <div
+          className="template-logo"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {/* USE PRODUCT TITLE OR PRODUCT LOGO */}
+          <h5
+            style={{
+              marginTop: "30px",
+              fontSize: "25px",
+              color: "red",
+              // border: '2px solid red',
+              //  padding:'20px 20px'
+            }}
+          >
+            {" "}
+            Product Title
+          </h5>
           {/* <img 
             src={productLogo} 
             alt="productLogo" 
@@ -108,9 +120,9 @@ const ProMain = () => {
         </div>
       </div>
 
-      <a 
-        href="/code/ProductsMain.zip" 
-        download 
+      <a
+        href="/code/ProductsMain.zip"
+        download
         style={{
           position: "absolute",
           bottom: "200px",
@@ -122,7 +134,7 @@ const ProMain = () => {
           border: "none",
           borderRadius: "6px",
           cursor: "pointer",
-          textDecoration: 'none'
+          textDecoration: "none",
         }}
       >
         ⬇ Download Full Project

@@ -9,16 +9,14 @@ import ing from "./assets/resoluteai.png";
 import { FaUserCog } from "react-icons/fa";
 import { MdSensors } from "react-icons/md";
 import { FaCog } from "react-icons/fa";
-import client from "./assets/client.webp";
+// import client from "./assets/client.webp";
+import adminlogo from "./assets/adminlogo.png";
 function CustomsPage() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();
 
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
   const location = useLocation();
-  const handlePageDownload = () => {
-    window.print(); // simplest way to save the current page as PDF
-  };
 
   const [selectedTitle, setSelectedTitle] = useState(
     location.state?.selectedTitle || localStorage.getItem("analyticsTitle")
@@ -95,7 +93,11 @@ function CustomsPage() {
           <button className="sidebar-toggle" onClick={toggleSidebar}>
             <div className="toggle-icon"></div>
           </button>
-
+          <button className="hamburger-toggle" onClick={toggleSidebar}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </button>
           {/* Center - Title */}
           <h1 className="header-title">Title of the Application</h1>
           <div className="app-client">
@@ -104,7 +106,7 @@ function CustomsPage() {
 
           {/* Right - Logo */}
           <div className="app-logo">
-            <img src={client} alt="Client Logo" />
+            <img src={adminlogo} alt="admin Logo" />
           </div>
         </header>
 

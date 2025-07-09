@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/ProductsZodha.css"; // 👈 Optional: separate CSS file for styling
+import "./styles/ProductsZodha.css";
 
 const titles = [
   "Agentic AI/LLM - Led Data Visualization Platform",
@@ -18,8 +18,8 @@ const titles = [
   "Multi–lingual Agentic AI led Public Policy Conversational Platform",
 ];
 
- const title = titles.sort()
-console.log(titles)
+const title = titles.sort();
+console.log(titles);
 const ProductsZodha = () => {
   const navigate = useNavigate();
 
@@ -50,7 +50,7 @@ const ProductsZodha = () => {
           ))}
         </tbody>
       </table>
-        <button 
+      <button
         onClick={() => navigate("/")}
         style={{
           position: "absolute",
@@ -62,13 +62,13 @@ const ProductsZodha = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Login Page
       </button>
-       
-       <button 
+
+      <button
         onClick={() => navigate("/mainproduct")}
         style={{
           position: "absolute",
@@ -80,10 +80,10 @@ const ProductsZodha = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
-         Go to Landing Screen
+        Go to Landing Screen
       </button>
     </div>
   );

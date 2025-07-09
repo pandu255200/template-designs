@@ -30,10 +30,10 @@ const titles = [
   "Object Detection",
   "Vehicle Layout Monitoring",
   "Workplace Monitoring",
-  "Person Fall or Trip Detection"
+  "Person Fall or Trip Detection",
 ];
 
-const title = titles.sort()
+const title = titles.sort();
 
 const ProFace = () => {
   const navigate = useNavigate();
@@ -65,7 +65,7 @@ const ProFace = () => {
           ))}
         </tbody>
       </table>
-       <button 
+      <button
         onClick={() => navigate("/")}
         style={{
           position: "absolute",
@@ -77,12 +77,12 @@ const ProFace = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Login Screen
       </button>
-       <button 
+      <button
         onClick={() => navigate("/mainproduct")}
         style={{
           position: "absolute",
@@ -94,13 +94,12 @@ const ProFace = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
-         Go to Landing Screen
+        Go to Landing Screen
       </button>
-      </div>
-      
+    </div>
   );
 };
 

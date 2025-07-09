@@ -6,8 +6,8 @@ import { MdSensors } from "react-icons/md";
 import "./styles/analytics.css";
 import image from "./assets/image.png";
 import ing from "./assets/resoluteai.png";
-import client from './assets/client.webp'
-import clientlogo from '../components/assets/clientlogo.png'
+import adminlogo from "./assets/adminlogo.png";
+import clientlogo from "../components/assets/clientlogo.png";
 
 const Analytics = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
@@ -16,19 +16,15 @@ const Analytics = () => {
 
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
 
- 
+  const [selectedTitle, setSelectedTitle] = useState(
+    location.state?.selectedTitle || localStorage.getItem("analyticsTitle")
+  );
 
-
-const [selectedTitle, setSelectedTitle] = useState(
-  location.state?.selectedTitle || localStorage.getItem("analyticsTitle")
-);
-
-useEffect(() => {
-  if (location.state?.selectedTitle) {
-    localStorage.setItem("analyticsTitle", location.state.selectedTitle);
-  }
-}, [location.state]);
-
+  useEffect(() => {
+    if (location.state?.selectedTitle) {
+      localStorage.setItem("analyticsTitle", location.state.selectedTitle);
+    }
+  }, [location.state]);
 
   return (
     <div className="app-container">
@@ -43,7 +39,6 @@ useEffect(() => {
             className={`nav-button ${
               location.pathname === "/analytics/home" ? "active" : ""
             }`}
-            // onClick={() => navigate("/analytics/home")}
           >
             <FaHome />
             <span>Home</span>
@@ -53,7 +48,6 @@ useEffect(() => {
             className={`nav-button ${
               location.pathname === "/analytics/sensors" ? "active" : ""
             }`}
-            // onClick={() => navigate("/analytics/sensors")}
           >
             <MdSensors />
             <span>Sensor's Health</span>
@@ -98,59 +92,55 @@ useEffect(() => {
 
       {/* Main Area */}
       <div className="main-content">
-         <header className="app-header">
-         {/* Left - Sidebar Toggle */}
-         <button className="sidebar-toggle" onClick={toggleSidebar}>
-           <div className="toggle-icon"></div>
-         </button>
-       
-        
+        <header className="app-header">
+          {/* Left - Sidebar Toggle */}
+          <button className="sidebar-toggle" onClick={toggleSidebar}>
+            <div className="toggle-icon"></div>
+          </button>
+          <button className="hamburger-toggle" onClick={toggleSidebar}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </button>
+
           {selectedTitle && (
-  <h1 
-    className="header-title" 
-    onClick={() => navigate("/product/analytics")} 
-    style={{ cursor: "pointer" }} 
-  >
-    {selectedTitle}
-  </h1>
-)}
-<div className="app-client">
-           <img src={clientlogo} alt="Client Logo" />
+            <h1
+              className="header-title"
+              onClick={() => navigate("/product/analytics")}
+              style={{ cursor: "pointer" }}
+            >
+              {selectedTitle}
+            </h1>
+          )}
+          <div className="app-client">
+            <img src={clientlogo} alt="Client Logo" />
           </div>
-        
-       
-        
-         <div className="app-logo">
-           <img src={client} alt="Client Logo" />
-         </div>
-       </header>
+
+          <div className="app-logo">
+            <img src={adminlogo} alt="admin Logo" />
+          </div>
+        </header>
 
         <div className="content-body">
-        
           <h2 className="dash-workspace-title">Work Space</h2>
-          <div className="download-actions">
- 
- 
-          </div>
-           <a 
-  href="/code/analytics.zip" 
-  download 
-  style={{
-    display: "inline-block",
-    marginTop: "10px",
-    padding: "8px 16px",
-    backgroundColor: "#ff4d4d",
-    color: "#fff",
-    borderRadius: "4px",
-    textDecoration: "none"
-  }}
->
-  ⬇ Download Full Project
-</a>
+          <div className="download-actions"></div>
+          <a
+            href="/code/analytics.zip"
+            download
+            style={{
+              display: "inline-block",
+              marginTop: "10px",
+              padding: "8px 16px",
+              backgroundColor: "#ff4d4d",
+              color: "#fff",
+              borderRadius: "4px",
+              textDecoration: "none",
+            }}
+          >
+            ⬇ Download Full Project
+          </a>
 
-
-                  <Outlet />
-                 
+          <Outlet />
         </div>
       </div>
     </div>

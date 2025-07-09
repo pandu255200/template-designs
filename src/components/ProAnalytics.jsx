@@ -1,9 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/ProductsZodha.css"; // 👈 Optional: separate CSS file for styling
+import "./styles/ProductsZodha.css";
 
 const titles = [
-   "Warehouse Management System",
+  "Warehouse Management System",
   "Employee Tracking System",
   "Control Tower – A real time centralized dashboard",
   "Predictive Maintenance",
@@ -14,7 +14,7 @@ const titles = [
   "Commodity Price Prediction",
   "Recommendation Engine",
 ];
-const title = titles.sort()
+const title = titles.sort();
 
 const ProAnalytics = () => {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ const ProAnalytics = () => {
           ))}
         </tbody>
       </table>
- <button 
+      <button
         onClick={() => navigate("/")}
         style={{
           position: "absolute",
@@ -58,12 +58,12 @@ const ProAnalytics = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Login Screen
       </button>
-       <button 
+      <button
         onClick={() => navigate("/mainproduct")}
         style={{
           position: "absolute",
@@ -75,10 +75,10 @@ const ProAnalytics = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
-         Go to Landing Screen
+        Go to Landing Screen
       </button>
     </div>
   );

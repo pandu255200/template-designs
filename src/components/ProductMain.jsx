@@ -1,13 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/ProductsZodha.css"; 
+import "./styles/ProductsZodha.css";
 
 const titles = [
   "AnalyticsKart Landing Screen",
   "FaceGenie Landing Screen",
-   "ZodhaGPT Landing Screen",
- 
- 
+  "ZodhaGPT Landing Screen",
 ];
 
 const ProductMain = () => {
@@ -40,7 +38,7 @@ const ProductMain = () => {
           ))}
         </tbody>
       </table>
-        <button 
+      <button
         onClick={() => navigate("/")}
         style={{
           position: "absolute",
@@ -52,7 +50,7 @@ const ProductMain = () => {
           color: "#fff",
           border: "none",
           borderRadius: "5px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ⬅ Back to Login Screen

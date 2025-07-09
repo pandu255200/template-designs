@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/MainTemplate.css";
-import logo from "./assets/resoluteai.png"; // replace with your AK or FG logo
-import ZodhaGpt from "./assets/ZodhaGpt.png"; // replace with your "Powered By" logo
+import logo from "./assets/resoluteai.png";
+import ZodhaGpt from "./assets/ZodhaGpt.png"; 
 import { useNavigate } from "react-router-dom";
 
 const MainTemplate = () => {
@@ -13,23 +13,22 @@ const MainTemplate = () => {
       navigate("/customs");
     } else if (selected === "mainpage") {
       navigate("/main");
-    } 
+    }
   };
 
-const handleProductsChange = (e) => {
-  const selected = e.target.value;
+  const handleProductsChange = (e) => {
+    const selected = e.target.value;
 
-  if (selected === "zodhagpt") {
-    navigate("/product/zodhagpt");
-  } else if (selected === "facegenie") {
-    navigate("/product/facegenie");
-  } else if (selected === "analytics") {
-    navigate("/product/analytics");
-  } else if (selected === "mainpage") {
-    navigate("/product/main");
-  }
-};
-
+    if (selected === "zodhagpt") {
+      navigate("/product/zodhagpt");
+    } else if (selected === "facegenie") {
+      navigate("/product/facegenie");
+    } else if (selected === "analytics") {
+      navigate("/product/analytics");
+    } else if (selected === "mainpage") {
+      navigate("/product/main");
+    }
+  };
 
   return (
     <div className="main-template-container">
@@ -74,11 +73,13 @@ const handleProductsChange = (e) => {
       </div>
       <div className="template-login-box">
         <div className="template-logo">
-          
-          <img src={ZodhaGpt} alt="ResoluteAI Software" style={{
-             margin:'30px 10px 0 100px'
-           }} />
-
+          <img
+            src={ZodhaGpt}
+            alt="ResoluteAI Software"
+            style={{
+              margin: "30px 10px 0 100px",
+            }}
+          />
         </div>
 
         <form className="template-form">
@@ -92,11 +93,15 @@ const handleProductsChange = (e) => {
         </form>
 
         <div className="template-powered-by">
-          <p style={{
-            fontWeight: 'bold',
-            margin: '0 0 3px 0',
-            fontSize:'14px'
-          }}>Powered By</p>
+          <p
+            style={{
+              fontWeight: "bold",
+              margin: "0 0 3px 0",
+              fontSize: "14px",
+            }}
+          >
+            Powered By
+          </p>
           <img src={logo} alt="ResoluteAI Software" className="template-dash" />
         </div>
       </div>

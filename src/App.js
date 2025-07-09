@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Prototype from './components/Prototype';
-import Home from './components/Home';
-import History from './components/History';
+
 
 import Analytics from './components/Analytics';
 // import Analyticshome from './components/Analyticshome';
@@ -24,8 +23,7 @@ function App() {
 
     {/* Facegenie */}
     <Route path="/prototype" element={<Prototype />}>
-      <Route path="home" element={<Home />} />
-      <Route path="history" element={<History />} />
+     
         </Route>
          <Route path="/product/facegenie" element={<ProFace />} />
 
