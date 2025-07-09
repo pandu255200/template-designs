@@ -97,11 +97,31 @@ function Prototype() {
           <button className="sidebar-toggle" onClick={toggleSidebar}>
             <div className="toggle-icon"></div>
           </button>
-          <button className="hamburger-toggle" onClick={toggleSidebar}>
+          <div className="hamburger-hover-wrapper">
+          <button className="hamburger-toggle">
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </button>
+        
+          <div className="hover-nav-card">
+            <button className="nav-button" >
+              <FaHome /> <span>Home</span>
+            </button>
+            <button className="nav-button" >
+              <MdSensors /> <span>Sensor's Health</span>
+            </button>
+            <button className="nav-button" >
+              <FaCog /> <span>Configuration</span>
+            </button>
+            <button className="nav-button" >
+              <FaUserCog /> <span>User Management</span>
+            </button>
+            <button className="nav-button" onClick={() => navigate("/")}>
+              <FaUserCog /> <span>Back to MainPage</span>
+            </button>
+          </div>
+        </div>
 
           {/* Center - Title */}
           {selectedTitle && (
