@@ -1,50 +1,49 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Prototype from './components/Prototype';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+// Product Pages
+import Prototype from './components/pages/ProductPages/Facegenie';
+import Analytics from './components/pages/ProductPages/Analytics';
+import ZodhaGpt from './components/pages/ProductPages/ZodhaGpt';
+import ProMain from './components/pages/ProductPages/ProMain';
 
-import Analytics from './components/Analytics';
-// import Analyticshome from './components/Analyticshome';
-import ZodhaGpt from './components/ZodhaGpt';
-import Maintemplate from './components/Maintemplate';
-import ProductPage from './components/ProductsZodha';
-import ProAnalytics from './components/ProAnalytics';
-import ProFace from './components/ProFace';
-import CustomsPage from './components/CustomsPage';
-import CustMain from './components/CustMain';
-import ProductMain from './components/ProductMain';
-import ProMain from './components/ProMain';
+// Template Page
+import Maintemplate from './components/pages/TemplatePages/Maintemplate';
+
+// Data Pages
+import ProductPage from './components/pages/DataPages/ProductsZodha';
+import ProAnalytics from './components/pages/DataPages/ProAnalytics';
+import ProFace from './components/pages/DataPages/ProFace';
+import ProductMain from './components/pages/DataPages/ProductMain';
+
+// Custom Pages
+import CustomsPage from './components/pages/CustomPages/CustomsPage';
+import CustMain from './components/pages/CustomPages/CustMain';
 
 function App() {
   return (
     <Router>
-  <Routes>
-    <Route path='/' element={<Maintemplate />} />
+      <Routes>
+        {/* Main Entry */}
+        <Route path="/" element={<Maintemplate />} />
 
-    {/* Facegenie */}
-    <Route path="/prototype" element={<Prototype />}>
-     
-        </Route>
-         <Route path="/product/facegenie" element={<ProFace />} />
+        {/* Product Pages */}
+        <Route path="/product/facegenie" element={<ProFace />} />
+        <Route path="/product/analytics" element={<ProAnalytics />} />
+        <Route path="/product/zodhagpt" element={<ProductPage />} />
+        <Route path="/product/main" element={<ProductMain />} />
 
-    {/* AnalyticsKart */}
-    <Route path="/analytics" element={<Analytics />}>
-      {/* <Route path="home" element={<Analyticshome />} /> */}
-    </Route>
+        {/* UI Pages for Products (optional) */}
+        <Route path="/prototype" element={<Prototype />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/zodhagpt" element={<ZodhaGpt />} />
+        <Route path="/mainproduct" element={<ProMain />} />
 
-    <Route path="/product/analytics" element={<ProAnalytics />} />
-
-    {/* ZodhaGpt */}
-    <Route path="/zodhagpt" element={<ZodhaGpt />} />
-    <Route path="/product/zodhagpt" element={<ProductPage />} />
-    <Route path="/customs" element={<CustomsPage />} />
-    <Route path="/main" element={<CustMain />} />
-    <Route path="/product/main" element={<ProductMain />} />
-    <Route path="/mainproduct" element={<ProMain />} />
-    
-  </Routes>
-</Router>
-
+        {/* Custom Pages */}
+        <Route path="/customs" element={<CustomsPage />} />
+        <Route path="/main" element={<CustMain />} />
+      </Routes>
+    </Router>
   );
 }
 

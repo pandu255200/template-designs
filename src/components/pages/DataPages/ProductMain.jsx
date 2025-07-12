@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/ProductsZodha.css";
+import "../../styles/ProductsZodha.css";
 
 const titles = [
   "AnalyticsKart Login Screen",

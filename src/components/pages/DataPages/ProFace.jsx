@@ -1,31 +1,50 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./styles/ProductsZodha.css";
+import "../../styles/ProductsZodha.css";
 
 const titles = [
-  "Warehouse Management System",
-  "Employee Tracking System",
-  "Control Tower – A real time centralized dashboard",
-  "Predictive Maintenance",
-  "Asset Management (Using RFID, BLE, etc)",
-  "Sentiment Analysis",
-  "Primary and Secondary sales – Prediction and Forecasting",
-  "Document Information Intelligence",
-  "Commodity Price Prediction",
-  "Recommendation Engine",
+  "Visitor Management System",
+  "Shrinkage Analytics",
+  "Defect Detection",
+  "Retail Store Analytics",
+  "Customer Behavior Analytics",
+  "Store Operations & Layout Optimization",
+  "Android & iOS App for Counting items",
+  "Time & Motion Analysis",
+  "Label Print Verification",
+  "Smart Parking Solutions for Airports & other sectors",
+  "Face Recognition and Voice Based Access Control",
+  "Face ID, Name, Age and Gender detection",
+  "Defect Detection & Counting on high-speed conveyors",
+  "Volumetric Box Analysis",
+  "Entry and Exit Movement Detection",
+  "Clean Room Analytics for Pharma Industry",
+  "Geofencing and Perimeter Safety",
+  "Crowd Detection",
+  "Shelf Occupancy Analytics",
+  "Worker Efficiency and Productivity Tracking",
+  "Barrel Verification during Oil change",
+  "Fire and Violence Detection",
+  "Truck Dock Utilization",
+  "Freezer Occupancy Analytics",
+  "Object Detection",
+  "Vehicle Layout Monitoring",
+  "Workplace Monitoring",
+  "Person Fall or Trip Detection",
 ];
+
 const title = titles.sort();
 
-const ProAnalytics = () => {
+const ProFace = () => {
   const navigate = useNavigate();
 
   const handleTitleClick = (title) => {
-    navigate("/analytics", { state: { selectedTitle: title } });
+    navigate("/prototype", { state: { selectedTitle: title } });
   };
 
   return (
     <div className="products-container">
-      <h2 className="products-heading">AnalyticsKart Product Pages List</h2>
+      <h2 className="products-heading">FaceGenie Product Pages List</h2>
       <table className="products-table">
         <thead>
           <tr>
@@ -84,4 +103,4 @@ const ProAnalytics = () => {
   );
 };
 
-export default ProAnalytics;
+export default ProFace;

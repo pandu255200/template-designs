@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./styles/MainTemplate.css";
+import "../../styles/MainTemplate.css";
 
-import logo from "./assets/resoluteai.png";
-import zodhaLogo from "./assets/ZodhaGpt.png";
-import analyticsKartLogo from "./assets/image.png";
-import facegenieLogo from "./assets/facegenie.png";
+import logo from "../../assets/resoluteai.png";
+import zodhaLogo from "../../assets/ZodhaGpt.png";
+import analyticsKartLogo from "../../assets/image.png";
+import facegenieLogo from "../../assets/facegenie.png";
 
 const ProMain = () => {
   const navigate = useNavigate();

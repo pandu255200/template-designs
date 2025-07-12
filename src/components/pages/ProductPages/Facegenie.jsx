@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import "../components/styles/Prototype.css";
-import { FaHome, FaHistory } from "react-icons/fa";
-import face from "../components/assets/facegenie.png";
-import ing from "./assets/resoluteai.png";
 import { FaUserCog } from "react-icons/fa";
 import { MdSensors } from "react-icons/md";
 import { FaCog } from "react-icons/fa";
-// import client from './assets/client.webp'
-import adminlogo from "./assets/adminlogo.png";
-import clientlogo from "../components/assets/clientlogo.png";
+import { FaHome, FaHistory } from "react-icons/fa";
+import "../../styles/Prototype.css";
+import face from "../../assets/facegenie.png";
+import ing from "../../assets/resoluteai.png";
+
+import adminlogo from "../../assets/adminlogo.png";
+import clientlogo from "../../assets/clientlogo.png";
 function Prototype() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();

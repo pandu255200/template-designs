@@ -26,7 +26,7 @@
 }
 
 .footer-logo p {
-  margin: 0 0 3px 0;  /* Top: 0, Right: 0, Bottom: 10px (adds gap), Left: 0 */
+  margin: 0 0 3px 0; 
   font-size: 14px;
   color: #000000;
 }
@@ -133,5 +133,5 @@
 
 
 .sidebar.closed ~ .main-content .hamburger-hover-wrapper {
-  right: 860px; /* match your closed sidebar width */
+  right: 860px;
 }

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import "../components/styles/Prototype.css";
 import { FaHome, FaHistory } from "react-icons/fa";
-
-import clientlogo from "../components/assets/clientlogo.png";
-import ing from "./assets/resoluteai.png";
 import { FaUserCog } from "react-icons/fa";
 import { MdSensors } from "react-icons/md";
 import { FaCog } from "react-icons/fa";
+import "../../styles/Prototype.css";
+
+import clientlogo from "../../assets/clientlogo.png";
+import ing from "../../assets/resoluteai.png";
 // import client from "./assets/client.webp";
-import adminlogo from "./assets/adminlogo.png";
+import adminlogo from "../../assets/adminlogo.png";
 function CustomsPage() {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/MainTemplate.css";
-import logo from "./assets/resoluteai.png"; 
-import clientlogo from "./assets/clientlogo.png";
+import "../../styles/MainTemplate.css";
+import logo from "../../assets/resoluteai.png"; 
+import clientlogo from "../../assets/clientlogo.png";
 import { useNavigate } from "react-router-dom";
 
 const CustMain = () => {

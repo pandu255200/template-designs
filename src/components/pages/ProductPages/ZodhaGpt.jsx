@@ -3,28 +3,35 @@ import { useNavigate, Outlet, useLocation } from "react-router-dom";
 import { FaHome, FaUserCog, FaCog } from "react-icons/fa";
 import { MdSensors } from "react-icons/md";
 
-import "./styles/analytics.css";
-import image from "./assets/image.png";
-import ing from "./assets/resoluteai.png";
-import adminlogo from "./assets/adminlogo.png";
-import clientlogo from "../components/assets/clientlogo.png";
+import "../../styles/analytics.css";
+import image from "../../assets/ZodhaGpt.png";
+import ing from "../../assets/ing.webp";
+// import client from './assets/client.webp'
+import adminlogo from "../../assets/adminlogo.png";
+import clientlogo from "../../assets/clientlogo.png";
 
-const Analytics = () => {
+const Dashboard = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
-
-  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
-
   const [selectedTitle, setSelectedTitle] = useState(
-    location.state?.selectedTitle || localStorage.getItem("analyticsTitle")
+    location.state?.selectedTitle || localStorage.getItem("selectedTitle")
   );
 
   useEffect(() => {
     if (location.state?.selectedTitle) {
-      localStorage.setItem("analyticsTitle", location.state.selectedTitle);
+      localStorage.setItem("selectedTitle", location.state.selectedTitle);
     }
   }, [location.state]);
+
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const handlePageDownload = () => {
+    window.print();
+  };
+
+  const handleTitleClick = () => {
+    navigate("/product/zodhagpt");
+  };
 
   return (
     <div className="app-container">
@@ -39,6 +46,7 @@ const Analytics = () => {
             className={`nav-button ${
               location.pathname === "/analytics/home" ? "active" : ""
             }`}
+            // onClick={() => navigate("/analytics/home")}
           >
             <FaHome />
             <span>Home</span>
@@ -48,6 +56,7 @@ const Analytics = () => {
             className={`nav-button ${
               location.pathname === "/analytics/sensors" ? "active" : ""
             }`}
+            // onClick={() => navigate("/analytics/sensors")}
           >
             <MdSensors />
             <span>Sensor's Health</span>
@@ -72,7 +81,6 @@ const Analytics = () => {
             <FaUserCog />
             <span>User Management</span>
           </button>
-
           <button
             className={`nav-button ${
               location.pathname === "/analytics/users" ? "active" : ""
@@ -97,37 +105,37 @@ const Analytics = () => {
           <button className="sidebar-toggle" onClick={toggleSidebar}>
             <div className="toggle-icon"></div>
           </button>
-        <div className="hamburger-hover-wrapper">
-  <button className="hamburger-toggle">
-    <div className="bar"></div>
-    <div className="bar"></div>
-    <div className="bar"></div>
-  </button>
+           <div className="hamburger-hover-wrapper">
+           <button className="hamburger-toggle">
+             <div className="bar"></div>
+             <div className="bar"></div>
+             <div className="bar"></div>
+           </button>
+         
+           <div className="hover-nav-card">
+             <button className="nav-button" >
+               <FaHome /> <span>Home</span>
+             </button>
+             <button className="nav-button" >
+               <MdSensors /> <span>Sensor's Health</span>
+             </button>
+             <button className="nav-button" >
+               <FaCog /> <span>Configuration</span>
+             </button>
+             <button className="nav-button" >
+               <FaUserCog /> <span>User Management</span>
+             </button>
+             <button className="nav-button" onClick={() => navigate("/")}>
+               <FaUserCog /> <span>Back to MainPage</span>
+             </button>
+           </div>
+         </div>
 
-  <div className="hover-nav-card">
-    <button className="nav-button" >
-      <FaHome /> <span>Home</span>
-    </button>
-    <button className="nav-button" >
-      <MdSensors /> <span>Sensor's Health</span>
-    </button>
-    <button className="nav-button" >
-      <FaCog /> <span>Configuration</span>
-    </button>
-    <button className="nav-button" >
-      <FaUserCog /> <span>User Management</span>
-    </button>
-    <button className="nav-button" onClick={() => navigate("/")}>
-      <FaUserCog /> <span>Back to MainPage</span>
-    </button>
-  </div>
-</div>
-
-
+          {/* Center - Title */}
           {selectedTitle && (
             <h1
               className="header-title"
-              onClick={() => navigate("/product/analytics")}
+              onClick={() => navigate("/product/zodhagpt")}
               style={{ cursor: "pointer" }}
             >
               {selectedTitle}
@@ -137,6 +145,7 @@ const Analytics = () => {
             <img src={clientlogo} alt="Client Logo" />
           </div>
 
+          {/* Right - Logo */}
           <div className="app-logo">
             <img src={adminlogo} alt="admin Logo" />
           </div>
@@ -144,9 +153,9 @@ const Analytics = () => {
 
         <div className="content-body">
           <h2 className="dash-workspace-title">Work Space</h2>
-          <div className="download-actions"></div>
+
           <a
-            href="/code/AnalyticsKart.zip"
+            href="/code/ZodhaGpt.zip"
             download
             style={{
               display: "inline-block",
@@ -168,4 +177,4 @@ const Analytics = () => {
   );
 };
 
-export default Analytics;
+export default Dashboard;

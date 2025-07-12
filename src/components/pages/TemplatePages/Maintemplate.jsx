@@ -1,7 +1,7 @@
 import React from "react";
-import "./styles/MainTemplate.css";
-import logo from "./assets/resoluteai.png";
-import ZodhaGpt from "./assets/ZodhaGpt.png"; 
+import "../../styles/MainTemplate.css";
+import logo from "../../assets/resoluteai.png";
+import ZodhaGpt from "../../assets/ZodhaGpt.png";
 import { useNavigate } from "react-router-dom";
 
 const MainTemplate = () => {
@@ -34,7 +34,11 @@ const MainTemplate = () => {
     <div className="main-template-container">
       <div className="template-content-box">
         <div className="template-section">
-          <h3>Custom Solutions</h3>
+          <h3 >AI Engineering Solutions</h3>
+          <h3 >
+            (Custom Solutions)
+          </h3>
+
           {/* <label htmlFor="customs-select">Select Custom Template:</label> */}
           <select
             id="customs-select"
@@ -47,13 +51,16 @@ const MainTemplate = () => {
           </select>
         </div>
 
-        <div className="template-section">
-          <h3>Products</h3>
+        <div className="template-sections" >
+          <h3 >Products</h3>
           {/* <label htmlFor="customs-select">Select Product Template:</label> */}
           <select
             id="customs-select"
             className="template-dropdown"
             onChange={handleProductsChange}
+            style={{
+              
+            }}
           >
             <option value="">-- Choose an option --</option>
             <option value="mainpage">Login Screen</option>

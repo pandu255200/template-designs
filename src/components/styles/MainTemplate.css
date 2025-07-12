@@ -34,13 +34,13 @@
 }
 
 .template-login-box {
-  width: 400px;              /* Reduced width */
-  height: 500px;             /* Add this line to reduce height */
-  flex: none;                /* Prevent it from stretching */
+  width: 400px;             
+  height: 500px;            
+  flex: none;               
   border: 1.5px solid red;
   border-radius: 12px;
   padding: 20px;     
-   margin-top: 33px;         /* Optional: Slightly reduce padding */
+   margin-top: 33px;        
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -141,8 +141,31 @@
   font-weight: bold;
   color: #333;
   text-align: center;
-  width: 200px;           /* Set fixed or use max-width instead */
-  margin: 40px auto 16px; /* Top, horizontal auto, bottom spacing */
+  width: 200px;           
+  margin: 40px auto 16px;
   border-radius: 6px;
   background-color: #f9f9f9;
+}
+
+
+.template-sections{
+  background-color: #ffffff;
+  padding: 17px;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+.template-sections h3 {
+  margin-left: 15px;
+  margin-bottom: 43px;
+  font-size: 18px;
+  color: #ff0707;
+}
+
+.template-sections label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
 }
