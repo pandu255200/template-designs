@@ -3,7 +3,7 @@ import "../../styles/MainTemplate.css";
 import logo from "../../assets/resoluteai.png";
 import ZodhaGpt from "../../assets/ZodhaGpt.png";
 import { useNavigate } from "react-router-dom";
-import { FaLock, FaRocket } from "react-icons/fa"; // 🚀 Rocket icon
+import { FaLock, FaRocket } from "react-icons/fa";
 
 const MainTemplate = () => {
   const navigate = useNavigate();
@@ -13,8 +13,8 @@ const MainTemplate = () => {
   const [loggedIn, setLoggedIn] = useState(false);
   const [message, setMessage] = useState("");
   const [messageColor, setMessageColor] = useState("green");
-  const [showBooster, setShowBooster] = useState(false); // 🚀 booster animation
-  const [boosterDirection, setBoosterDirection] = useState("up"); // "up" or "down"
+  const [showBooster, setShowBooster] = useState(false);
+  const [boosterDirection, setBoosterDirection] = useState("up");
 
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("loggedIn");
@@ -56,11 +56,10 @@ const MainTemplate = () => {
       setMessageColor("green");
       setEmail("");
       setPassword("");
-      setShowBooster(true); // 🚀 trigger animation
+      setShowBooster(true);
       setBoosterDirection("up");
       setTimeout(() => setShowBooster(false), 3000);
 
-      // Stop showing booster after animation (e.g. 3s)
       setTimeout(() => setShowBooster(false), 3000);
     } else {
       setMessage("Invalid credentials");
@@ -86,7 +85,6 @@ const MainTemplate = () => {
 
   return (
     <div className="main-template-container">
-      {/* 🚀 Booster Animation */}
       {showBooster && (
         <div
           className={`booster-animation ${
@@ -156,9 +154,24 @@ const MainTemplate = () => {
             />
 
             <button type="submit">Sign In</button>
-            <p style={{ fontWeight: "bold", color: messageColor }}>{message}</p>
+            <p
+              style={{
+                fontWeight: "bold",
+                color: messageColor,
+                marginLeft: "100px",
+              }}
+            >
+              {message}
+            </p>
 
-            <p style={{ fontSize: "12px", color: "gray", textAlign: "center" }}>
+            <p
+              style={{
+                marginTop: "20px",
+                fontSize: "12px",
+                color: "gray",
+                textAlign: "center",
+              }}
+            >
               Demo: admin@example.com / admin123
             </p>
           </form>
@@ -170,8 +183,8 @@ const MainTemplate = () => {
             <button
               onClick={handleLockAgain}
               style={{
-                marginTop: "10px",
-                backgroundColor: "#d9534f",
+                marginTop: "20px",
+                backgroundColor: "#e32a24ff",
                 color: "#fff",
                 border: "none",
                 borderRadius: "4px",
@@ -180,6 +193,7 @@ const MainTemplate = () => {
                 alignItems: "center",
                 gap: "6px",
                 cursor: "pointer",
+                marginLeft: "120px",
               }}
             >
               <FaLock /> Lock & Logout
